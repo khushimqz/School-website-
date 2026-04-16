@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Result</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+    }
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Check Your Result</h2>
+
+  <input type="text" id="roll" placeholder="Enter Roll Number">
+  <br><br>
+  <button onclick="getResult()">Check Result</button>
+
+  <div id="output"></div>
+
+  <script>
+    function getResult() {
+      var roll = document.getElementById("roll").value.trim();
+
+      var students = {
+        "7001": {
+          name: "Mohammad Ajim Quraishi",
+          marks: "380.6/600",
+          grade: "B"
+        },
+        "7002": {
+          name: "Rahul Kumar",
+          marks: "450/600",
+          grade: "A"
+        }
+      };
+
+      if (students[roll]) {
+        document.getElementById("output").innerHTML =
+          "Name: " + students[roll].name + "<br>" +
+          "Marks: " + students[roll].marks + "<br>" +
+          "Grade: " + students[roll].grade;
+      } else {
+        document.getElementById("output").innerHTML = "Result not found";
+      }
+    }
+  </script>
+
+</body>
+</html>
