@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Result</title>
+</head>
+
+<body style="font-family: Arial; background:#eef2f3;">
+
+<div style="
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #2c3e50;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+">
+
+    <h1 style="color:#2c3e50; font-size:22px;">
+        🎓 Swami Vivekanand Vidya Mandir Higher Secondary School, Nawagarh
+    </h1>
+
+    <h2 style="color:green; margin-bottom:20px;">
+        Result 2026 – Declared
+    </h2>
+
+    <input type="number" id="roll" placeholder="Enter Roll Number"
+    style="padding:10px; width:80%; border:1px solid #ccc; border-radius:5px;">
+
+    <br><br>
+
+    <button onclick="checkResult()"
+    style="padding:10px 20px; background:green; color:white; border:none; border-radius:5px;">
+        Check Result
+    </button>
+
+    <div id="result" style="margin-top:20px; font-size:18px;"></div>
+
+</div>
+
+<script>
+function checkResult() {
+    var roll = document.getElementById("roll").value;
+    var output = document.getElementById("result");
+
+    var students = {
+        "7001": {name: "Mohammad Ajim Quraishi", marks: "380.6/600", grade: "B"},
+        "7002": {name: "", marks: "", grade: ""},
+        "7003": {name: "", marks: "", grade: ""},
+        "7004": {name: "", marks: "", grade: ""},
+        "7005": {name: "", marks: "", grade: ""},
+        "7006": {name: "", marks: "", grade: ""},
+        "7007": {name: "", marks: "", grade: ""},
+        "7008": {name: "", marks: "", grade: ""},
+        "7009": {name: "", marks: "", grade: ""},
+        "7010": {name: "", marks: "", grade: ""},
+        "7011": {name: "", marks: "", grade: ""},
+        "7012": {name: "", marks: "", grade: ""},
+        "7013": {name: "", marks: "", grade: ""},
+        "7014": {name: "", marks: "", grade: ""},
+        "7015": {name: "", marks: "", grade: ""},
+        "7016": {name: "", marks: "", grade: ""},
+        "7017": {name: "", marks: "", grade: ""},
+        "7018": {name: "", marks: "", grade: ""},
+        "7019": {name: "", marks: "", grade: ""},
+        "7020": {name: "", marks: "", grade: ""},
+        "7021": {name: "", marks: "", grade: ""},
+        "7022": {name: "", marks: "", grade: ""},
+        "7023": {name: "", marks: "", grade: ""},
+        "7024": {name: "", marks: "", grade: ""},
+        "7025": {name: "", marks: "", grade: ""},
+        "7026": {name: "", marks: "", grade: ""},
+        "7027": {name: "", marks: "", grade: ""},
+        "7028": {name: "", marks: "", grade: ""},
+        "7029": {name: "", marks: "", grade: ""},
+        "7030": {name: "", marks: "", grade: ""},
+        "7031": {name: "", marks: "", grade: ""},
+        "7032": {name: "", marks: "", grade: ""},
+        "7033": {name: "", marks: "", grade: ""},
+        "7034": {name: "", marks: "", grade: ""},
+        "7035": {name: "", marks: "", grade: ""},
+        "7036": {name: "", marks: "", grade: ""},
+        "7037": {name: "", marks: "", grade: ""},
+        "7038": {name: "", marks: "", grade: ""},
+        "7039": {name: "", marks: "", grade: ""},
+        "7040": {name: "", marks: "", grade: ""}
+    };
+
+    if(students[roll] && students[roll].name !== "") {
+        output.innerHTML = 
+            "<b>Name:</b> " + students[roll].name + "<br>" +
+            "<b>Marks:</b> " + students[roll].marks + "<br>" +
+            "<b>Grade:</b> " + students[roll].grade;
+    } else {
+        output.innerHTML = "Result not found!";
+    }
+}
+</script>
+
+</body>
+</html>
