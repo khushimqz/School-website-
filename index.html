@@ -1,2 +1,66 @@
-# School-website-
-A School website where notice are visible teacher details result declare to student 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Portal</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 90%;
+        }
+        button {
+            background: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Check Result</h2>
+    <input type="text" id="roll" placeholder="Enter Roll Number">
+    <button onclick="checkResult()">Check Result</button>
+
+    <h3 id="result"></h3>
+</div>
+
+<script>
+function checkResult() {
+    var roll = document.getElementById("roll").value;
+    var resultText = "";
+
+    // Sample student data
+    if (roll == "101") {
+        resultText = "Name: Rahul | Marks: 450/500 | Grade: A+";
+    }
+    else if (roll == "102") {
+        resultText = "Name: Priya | Marks: 420/500 | Grade: A";
+    }
+    else if (roll == "103") {
+        resultText = "Name: Aman | Marks: 380/500 | Grade: B+";
+    }
+    else {
+        resultText = "Result not found!";
+    }
+
+    document.getElementById("result").innerHTML = resultText;
+}
+</script>
+
+</body>
+</html>
