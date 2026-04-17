@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Result 2025</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        #resultBox {
+            margin-top: 20px;
+            border: 1px solid black;
+            padding: 15px;
+            display: none;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Swami Vivekanand Vidya Mandir Higher Secondary School, Nawagarh</h1>
+<h2>Class 7th Annual Exam Result 2025</h2>
+
+<label>रोल नंबर:</label>
+<input type="text" id="roll"><br><br>
+
+<button onclick="checkResult()">परिणाम देखें</button>
+
+<div id="resultBox"></div>
+
+<script>
+function checkResult() {
+    let roll = document.getElementById("roll").value;
+    let resultBox = document.getElementById("resultBox");
+
+    let data = {
+        "7001": "नाम: Student 1<br>प्राप्तांक: 380 / 600<br>ग्रेड: B",
+        "7002": "नाम: Student 2<br>प्राप्तांक: 400 / 600<br>ग्रेड: B+",
+        "7003": "नाम: Student 3<br>प्राप्तांक: 420 / 600<br>ग्रेड: A",
+        "7004": "नाम: Student 4<br>प्राप्तांक: 390 / 600<br>ग्रेड: B",
+        "7005": "नाम: Student 5<br>प्राप्तांक: 450 / 600<br>ग्रेड: A",
+        "7006": "नाम: Student 6<br>प्राप्तांक: 370 / 600<br>ग्रेड: C",
+        "7007": "नाम: Student 7<br>प्राप्तांक: 410 / 600<br>ग्रेड: B+",
+        "7008": "नाम: Student 8<br>प्राप्तांक: 430 / 600<br>ग्रेड: A",
+        "7009": "नाम: Student 9<br>प्राप्तांक: 360 / 600<br>ग्रेड: C",
+        "7010": "नाम: Student 10<br>प्राप्तांक: 395 / 600<br>ग्रेड: B",
+
+        "7011": "नाम: Student 11<br>प्राप्तांक: 405 / 600<br>ग्रेड: B+",
+        "7012": "नाम: Student 12<br>प्राप्तांक: 415 / 600<br>ग्रेड: A",
+        "7013": "नाम: Student 13<br>प्राप्तांक: 385 / 600<br>ग्रेड: B",
+        "7014": "नाम: Student 14<br>प्राप्तांक: 440 / 600<br>ग्रेड: A",
+        "7015": "नाम: Student 15<br>प्राप्तांक: 300 / 600<br>ग्रेड: C",
+        "7016": "नाम: Student 16<br>प्राप्तांक: 350 / 600<br>ग्रेड: C",
+        "7017": "नाम: Student 17<br>प्राप्तांक: 460 / 600<br>ग्रेड: A+",
+        "7018": "नाम: Student 18<br>प्राप्तांक: 420 / 600<br>ग्रेड: A",
+        "7019": "नाम: Student 19<br>प्राप्तांक: 390 / 600<br>ग्रेड: B",
+        "7020": "नाम: Student 20<br>प्राप्तांक: 410 / 600<br>ग्रेड: B+",
+
+        "7021": "नाम: Student 21<br>प्राप्तांक: 430 / 600<br>ग्रेड: A",
+        "7022": "नाम: Student 22<br>प्राप्तांक: 370 / 600<br>ग्रेड: C",
+        "7023": "नाम: Student 23<br>प्राप्तांक: 400 / 600<br>ग्रेड: B+",
+        "7024": "नाम: Student 24<br>प्राप्तांक: 380 / 600<br>ग्रेड: B",
+        "7025": "नाम: Student 25<br>प्राप्तांक: 450 / 600<br>ग्रेड: A",
+        "7026": "नाम: Student 26<br>प्राप्तांक: 470 / 600<br>ग्रेड: A+",
+        "7027": "नाम: Student 27<br>प्राप्तांक: 390 / 600<br>ग्रेड: B",
+        "7028": "नाम: Student 28<br>प्राप्तांक: 410 / 600<br>ग्रेड: B+",
+        "7029": "नाम: Student 29<br>प्राप्तांक: 420 / 600<br>ग्रेड: A",
+        "7030": "नाम: Student 30<br>प्राप्तांक: 360 / 600<br>ग्रेड: C",
+
+        "7031": "नाम: Student 31<br>प्राप्तांक: 395 / 600<br>ग्रेड: B",
+        "7032": "नाम: Student 32<br>प्राप्तांक: 405 / 600<br>ग्रेड: B+",
+        "7033": "नाम: Student 33<br>प्राप्तांक: 415 / 600<br>ग्रेड: A",
+        "7034": "नाम: Student 34<br>प्राप्तांक: 430 / 600<br>ग्रेड: A",
+        "7035": "नाम: Student 35<br>प्राप्तांक: 370 / 600<br>ग्रेड: C",
+        "7036": "नाम: Student 36<br>प्राप्तांक: 450 / 600<br>ग्रेड: A",
+        "7037": "नाम: Student 37<br>प्राप्तांक: 460 / 600<br>ग्रेड: A+",
+        "7038": "नाम: Student 38<br>प्राप्तांक: 390 / 600<br>ग्रेड: B",
+        "7039": "नाम: Student 39<br>प्राप्तांक: 410 / 600<br>ग्रेड: B+",
+        "7040": "नाम: Student 40<br>प्राप्तांक: 420 / 600<br>ग्रेड: A"
+    };
+
+    if(data[roll]) {
+        resultBox.style.display = "block";
+        resultBox.innerHTML = data[roll];
+    } else {
+        resultBox.style.display = "block";
+        resultBox.innerHTML = "रोल नंबर गलत है";
+    }
+}
+</script>
+
+</body>
+</html>
